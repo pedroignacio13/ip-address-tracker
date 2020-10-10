@@ -1,6 +1,6 @@
-/* window.onload = () => {
-    setMap()
-} */
+window.onload = () => {
+    setMap(51.505, -0.09, "Londres")
+}
 
 /* IP INPUT */
 const ip = document.querySelector("#ip-input");
@@ -57,6 +57,8 @@ function displayInfo(info){
 
     location.innerText = `${info.location.city}, ${info.location.region}, ${info.location.postalCode}`
 
+    var lat = info.location.lat;
+    var long = info.location.lng;
     var regiao = info.location.region;
 
     /* 
@@ -73,7 +75,7 @@ function displayInfo(info){
 
     isp.innerText = `${info.isp}`
 
-    setMap(info.location.lat, info.location.lng, regiao)
+    setMap(lat, long, regiao)
 
     /* console.log(info) */
 }

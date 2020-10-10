@@ -109,8 +109,7 @@ header h2{
     margin-left: 2.196vw;
 }
 #outputs div h4{
-    /* font-size: 24px; */
-    font-size: 2.2vw;
+    font-size: 20px;
     font-weight: 500;
 
     margin-left: 2.196vw;
@@ -121,10 +120,13 @@ header h2{
     border-right: 1px solid lightgray;
 }
 #location h4{
-    font-size: 20px !important;
+    /* font-size: 20px !important; */
 }
 #timezone{
     border-right: 1px solid lightgray;
+}
+#isp h4{
+    /* font-size: 20px !important; */
 }
 
 @media(max-width: 800px){
