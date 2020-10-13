@@ -22,7 +22,7 @@ header{
     flex-direction: column;
     align-items: center;
 
-    background-image: url(/code/images/pattern-bg.png);
+    background-image: url(../images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -58,7 +58,7 @@ header h2{
     border: none;
     border-radius: 0px 10px 10px 0px;
 
-    background-image: url(./code/images/icon-arrow.svg);
+    background-image: url(../images/icon-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
 
