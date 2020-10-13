@@ -58,6 +58,7 @@ async function ipSearch(){
      .catch(err => console.log(err))
 }
 
+
 /* ATUALIZAR O MAPA PARA A POSIÇÃO DO IP INDICADO */
 function setLocation(lat, long){
     mymap.setView([lat, long], 13)
