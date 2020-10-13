@@ -12,7 +12,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzN1cjZ0cTAxMXoyeGxmbnd2b3JlbjEifQ.Q3yT6MRpn5KpqpMfPsLhbQ'
+    //accessToken: 'pk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzN1cjZ0cTAxMXoyeGxmbnd2b3JlbjEifQ.Q3yT6MRpn5KpqpMfPsLhbQ'
+    accessToken: 'sk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzhlMzEzejAxZTkyenBxem4zb25lcmkifQ.SxeEa0Ud5ejzzoC64G-GBQ'
 }).addTo(mymap);
 
 /* IP INPUT */
@@ -48,14 +49,16 @@ function displayInfo(info){
 /* função ativada quando o usuário insere o ip e clica no botão */
 async function ipSearch(){
     const key = "at_mJUX3S4rwPVv3BbueqhMxgdvzKxdT";
-    var url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip.value}`;
+    var url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip.value}&domain=${ip.value}`;
     var req = await fetch(url)
      .then(res => res.json()
 
       .then(info => displayInfo(info))
 
      )
-     .catch(err => console.log(err))
+     .catch(err => {
+         alert("Informações inválidas! Verifique-as e insira-as novamente.");
+     })
 }
 
 
