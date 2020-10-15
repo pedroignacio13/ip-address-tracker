@@ -1,3 +1,7 @@
+/* 
+THE PROJECT HAS LIMITED REQUESTS, ONCE YOU GOT IT YOU HAVE TO CHANGE THE KEYS TO YOUR OWN
+*/
+
 /* LOCALIZAÇÃO DO USUARIO */
 navigator.geolocation.getCurrentPosition(function(pos){
     setLocation(pos.coords.latitude, pos.coords.longitude)
@@ -12,7 +16,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    //accessToken: 'pk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzN1cjZ0cTAxMXoyeGxmbnd2b3JlbjEifQ.Q3yT6MRpn5KpqpMfPsLhbQ'
     accessToken: 'sk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzhlMzEzejAxZTkyenBxem4zb25lcmkifQ.SxeEa0Ud5ejzzoC64G-GBQ'
 }).addTo(mymap);
 
@@ -60,7 +63,6 @@ async function ipSearch(){
          alert("Informações inválidas! Verifique-as e insira-as novamente.");
      })
 }
-
 
 /* ATUALIZAR O MAPA PARA A POSIÇÃO DO IP INDICADO */
 function setLocation(lat, long){
