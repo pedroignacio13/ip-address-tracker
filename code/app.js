@@ -73,6 +73,10 @@ function setLocation(lat, long){
 
 /* posiciona o marcador na posição geográfica */
 function setMarker(lat, long){
-    let marker = L.marker([lat, long]).addTo(mymap);
+    //let marker = L.marker([lat, long]).addTo(mymap);
+    let myIcon = L.icon({
+        iconUrl: './images/icon-location.svg'
+    });
+    L.marker([lat, long], {icon: myIcon}).addTo(mymap)
     marker.bindPopup(`<b>Hi there!</b><br>You are here.`).openPopup();
 }
