@@ -62,7 +62,19 @@ async function ipSearch(){
      })
 }
 
-ipSearch()
+/* PUXAR O IP DO USUÁRIO */
+async function clientIp(){
+    const key = "at_mJUX3S4rwPVv3BbueqhMxgdvzKxdT";
+    var url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip.value}&domain=${ip.value}`;
+    var req = await fetch(url)
+     .then(res => res.json()
+
+      .then(info => displayInfo(info))
+
+     )
+}
+
+clientIp()
 
 /* ATUALIZAR O MAPA PARA A POSIÇÃO DO IP INDICADO */
 function setLocation(lat, long){
@@ -73,10 +85,10 @@ function setLocation(lat, long){
 
 /* posiciona o marcador na posição geográfica */
 function setMarker(lat, long){
-    //let marker = L.marker([lat, long]).addTo(mymap);
     let myIcon = L.icon({
-        iconUrl: './images/icon-location.svg'
+        iconUrl: './images/icon-location.svg',
+        popupAnchor: [+25, 0]
     });
-    L.marker([lat, long], {icon: myIcon}).addTo(mymap)
+    let marker = L.marker([lat, long], {icon: myIcon}).addTo(mymap);
     marker.bindPopup(`<b>Hi there!</b><br>You are here.`).openPopup();
 }
