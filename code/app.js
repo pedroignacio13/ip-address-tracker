@@ -11,6 +11,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
+    zoomControl: false,
     //accessToken: 'pk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzN1cjZ0cTAxMXoyeGxmbnd2b3JlbjEifQ.Q3yT6MRpn5KpqpMfPsLhbQ'
     accessToken: 'sk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzhlMzEzejAxZTkyenBxem4zb25lcmkifQ.SxeEa0Ud5ejzzoC64G-GBQ'
 }).addTo(mymap);
@@ -87,7 +88,7 @@ function setLocation(lat, long){
 function setMarker(lat, long){
     let myIcon = L.icon({
         iconUrl: './images/icon-location.svg',
-        popupAnchor: [+25, 0]
+        popupAnchor: [+21, 0]
     });
     let marker = L.marker([lat, long], {icon: myIcon}).addTo(mymap);
     marker.bindPopup(`<b>Hi there!</b><br>You are here.`).openPopup();
