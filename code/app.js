@@ -50,7 +50,7 @@ function displayInfo(info){
 
 /* função ativada quando o usuário insere o ip e clica no botão */
 async function ipSearch(){
-    const key = "at_mJUX3S4rwPVv3BbueqhMxgdvzKxdT";
+    const key = "API_KEY";
     var url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip.value}&domain=${ip.value}`;
     var req = await fetch(url)
      .then(res => res.json()
@@ -65,7 +65,7 @@ async function ipSearch(){
 
 /* PUXAR O IP DO USUÁRIO */
 async function clientIp(){
-    const key = "at_mJUX3S4rwPVv3BbueqhMxgdvzKxdT";
+    const key = "API_KEY";
     var url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip.value}&domain=${ip.value}`;
     var req = await fetch(url)
      .then(res => res.json()
