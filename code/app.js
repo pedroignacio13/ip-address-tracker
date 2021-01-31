@@ -12,8 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1,
     zoomControl: false,
-    //accessToken: 'pk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzN1cjZ0cTAxMXoyeGxmbnd2b3JlbjEifQ.Q3yT6MRpn5KpqpMfPsLhbQ'
-    accessToken: 'sk.eyJ1IjoicGVkcm9pZ25hY2lvIiwiYSI6ImNrZzhlMzEzejAxZTkyenBxem4zb25lcmkifQ.SxeEa0Ud5ejzzoC64G-GBQ'
+    accessToken: 'PRIVATE_ACCESS_TOKEN'
 }).addTo(mymap);
 
 /* IP INPUT */
